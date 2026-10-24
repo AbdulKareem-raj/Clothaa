@@ -3,6 +3,7 @@ import type { NextAuthConfig } from 'next-auth'
 // Edge-safe config — NO Prisma / Node-only imports here.
 // Used by middleware and extended in auth.ts with the Credentials provider.
 export const authConfig = {
+  trustHost: true,
   pages: {
     signIn: '/login',
     error: '/login',
